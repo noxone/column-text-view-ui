@@ -20,6 +20,14 @@ public struct ColumnedTextView: View {
     @State public private(set) var fontSize: CGFloat = 0.0
     @State public private(set) var textColor: UIColor? = nil
     @State public private(set) var column: WrapperTextView.ColumnUnit
+    
+    public init(attributedString: NSMutableAttributedString, font: UIFont? = nil, fontSize: CGFloat, textColor: UIColor? = nil, column: WrapperTextView.ColumnUnit) {
+        self.attributedString = attributedString
+        self.font = font
+        self.fontSize = fontSize
+        self.textColor = textColor
+        self.column = column
+    }
         
     // MARK: - Conformance to View protocol
     
